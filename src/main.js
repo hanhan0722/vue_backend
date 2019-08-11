@@ -5,7 +5,12 @@ import App from '@/pages/App/App'
 import router from './router'
 import store from './vuex/store'
 import axios from 'axios'
-import { Loading, Message, Container, Header, Aside, Main, Footer } from 'element-ui'
+import {
+  Container, Header, Aside, Main, Footer, Loading, Message, Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
+} from 'element-ui'
 
 Vue.use(Loading.directive)
 Vue.use(Container)
@@ -13,11 +18,17 @@ Vue.use(Header)
 Vue.use(Aside)
 Vue.use(Main)
 Vue.use(Footer)
+Vue.use(Loading)
+Vue.use(Menu)
+Vue.use(Submenu)
+Vue.use(MenuItem)
+Vue.use(MenuItemGroup)
 
-Vue.prototype.$ajax = axios
+Vue.prototype.$ajax = axios;
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$message = Message;
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
