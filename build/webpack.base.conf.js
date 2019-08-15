@@ -39,7 +39,7 @@ module.exports = {
     }, {
       test: /\.less$/,
       loader: "style-loader!css-loader!less-loader",
-    },{
+    }, {
       test: /\.js$/,
       loader: 'babel-loader',
       include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
@@ -67,10 +67,10 @@ module.exports = {
     }]
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      jQuery: "jquery",
-      $: "jquery"
-    })
+    // new webpack.ProvidePlugin({
+    //   jQuery: "jquery",
+    //   $: "jquery"
+    // })
   ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue

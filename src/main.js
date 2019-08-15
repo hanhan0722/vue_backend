@@ -4,12 +4,10 @@ import Vue from 'vue'
 import App from '@/pages/App/App'
 import router from './router'
 import store from './vuex/store'
-import axios from 'axios'
+import axios from './http'
 import {
   Container, Header, Aside, Main, Footer, Loading, Message, Menu,
-  Submenu,
-  MenuItem,
-  MenuItemGroup,
+  Submenu, MenuItem, MenuItemGroup, Badge
 } from 'element-ui'
 
 Vue.use(Loading.directive)
@@ -23,10 +21,11 @@ Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
+Vue.use(Badge)
 
-Vue.prototype.$ajax = axios;
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$message = Message;
+Vue.prototype.$ajax = axios;
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

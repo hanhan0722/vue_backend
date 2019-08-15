@@ -31,7 +31,7 @@ exports.cssLoaders = function (options) {
 
   // generate loader string to be used with extract text plugin
   function generateLoaders(loader, loaderOptions) {
-const loaders = options.usePostCSS ? [cssLoader, postcssLoader]  : [cssLoader]
+    const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
@@ -61,7 +61,7 @@ const loaders = options.usePostCSS ? [cssLoader, postcssLoader]  : [cssLoader]
     less: generateLoaders('less').concat({
       loader: 'sass-resources-loader',
       options: {
-        resources: path.resolve(__dirname, '../src/assets/style/style.less')
+        resources: [path.resolve(__dirname, '../src/assets/style/mixin.less'), path.resolve(__dirname, '../src/assets/style/variable.less'),]
       }
     }),
     sass: generateLoaders('sass', {

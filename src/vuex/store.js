@@ -1,17 +1,20 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import Layout from '@/pages/Layout/Layout.store'
+import Login from '@/pages/Login/Login.store'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  state: {
-      
+  modules:{
+    Layout,
+    Login
   },
-  // 修改vuex中数据示例  
-  // this.$store.commit("newXXX",val); 
-  // 括号里前面是mutations里的方法名 后面是要改成的值
-  mutations: {}
+  state: {
+
+  },
+  mutations: {},
+  actions:{}
 })
 
 export default store

@@ -26,8 +26,17 @@ body {
     Heiti, SimSun, sans-serif !important;
   font-size: 12px;
 }
+[class*=" el-icon-"],
+[class^="el-icon-"] {
+  font-size: 20px;
+}
 ::-webkit-scrollbar {
-  display: none;
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -80,5 +89,9 @@ a:active {
 }
 .textarea:focus {
   outline-color: rgba(190, 184, 149, 1);
+}
+i {
+  display: inline-block;
+  vertical-align: middle;
 }
 </style>
