@@ -53,5 +53,8 @@ export default {
 <style lang="less" scoped>
 .layout-aside {
   background-color: #d3dce6;
+  /deep/.el-aside{
+    overflow: hidden;
+  }
 }
 </style>
